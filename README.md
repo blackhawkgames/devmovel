@@ -194,5 +194,3 @@ Evite usar `localhost`, pois pode causar problemas de conexão no navegador.
 # 👨‍💻 Autor
 
 Projeto desenvolvido para fins acadêmicos na disciplina de Desenvolvimento Mobile.
-
----
