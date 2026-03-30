@@ -45,6 +45,7 @@ class _CadastroPageState extends State<CadastroPage> {
       appBar: AppBar(title: Text('Cadastro')),
       body: Padding(
         padding: EdgeInsets.all(16),
+        child: SingleChildScrollView(
         child: Column(
           children: [
             TextField(
@@ -62,6 +63,7 @@ class _CadastroPageState extends State<CadastroPage> {
             ),
           ],
         ),
+      ),
       ),
     );
   }

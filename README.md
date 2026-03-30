@@ -1,49 +1,28 @@
-# 📦 Sistema de Gerenciamento de Usuários
+# Sistema de Gerenciamento de Usuários
 
-Este projeto consiste no desenvolvimento de uma aplicação completa com **Backend em Node.js** e **Frontend em Flutter Web**, conectados a um banco de dados **PostgreSQL via Docker**.
+## Tecnologias
 
----
-
-# 🚀 Tecnologias Utilizadas
-
-## 🔙 Backend
-
-* Node.js
-* Express.js
-* PostgreSQL
-* Docker
-* Swagger (documentação da API)
-
-## 🎨 Frontend
-
-* Flutter (Web)
-* HTTP package
+* Node.js + Express
+* PostgreSQL (Docker)
+* Flutter Web
+* Swagger
 
 ---
 
-# 🐳 Configuração do Banco de Dados (Docker)
+## Execução
 
-1. Certifique-se de ter o Docker instalado e em execução.
+### 1. Banco de dados (Docker)
 
-2. Na raiz do projeto backend, execute:
+Na pasta do docker-compose:
 
 ```bash
 docker compose up -d
 ```
 
-3. O banco PostgreSQL estará disponível em:
+Acesse o pgAdmin em:
+http://localhost:5050
 
-* Host: localhost
-* Porta: 5432
-* Usuário: admin
-* Senha: admin
-* Banco: teste
-
----
-
-# 🧱 Criação da Tabela
-
-Acesse o pgAdmin (http://localhost:5050) e execute:
+Crie a tabela:
 
 ```sql
 CREATE TABLE usuarios (
@@ -55,142 +34,31 @@ CREATE TABLE usuarios (
 
 ---
 
-# ⚙️ Executando o Backend
+### 2. Backend
 
-1. Acesse a pasta do backend:
-
-```bash
-cd backend
-```
-
-2. Instale as dependências:
-
-```bash
-npm install
-```
-
-3. Execute o servidor:
+Na pasta do backend:
 
 ```bash
 node index.js
 ```
 
-4. A API estará disponível em:
-
-```
+API disponível em:
 http://localhost:3000
-```
 
 ---
 
-# 📚 Documentação Swagger
+### 3. Frontend (Flutter)
 
-Acesse:
-
-```
-http://localhost:3000/api-docs
-```
-
-Nesta interface é possível testar:
-
-* POST /usuarios
-* GET /usuarios
-
----
-
-# 🌐 Executando o Frontend (Flutter Web)
-
-1. Acesse a pasta do frontend:
-
-```bash
-cd front_usuarios
-```
-
-2. Instale as dependências:
+Na pasta do projeto Flutter:
 
 ```bash
 flutter pub get
-```
-
-3. Execute o projeto:
-
-```bash
 flutter run -d chrome
 ```
 
 ---
 
-# ⚠️ IMPORTANTE
+## Observações
 
-No código Flutter, utilize:
-
-```dart
-http://127.0.0.1:3000/usuarios
-```
-
-Evite usar `localhost`, pois pode causar problemas de conexão no navegador.
-
----
-
-# 📱 Funcionalidades
-
-## 🏠 Tela Inicial
-
-* Navegação entre telas
-* Botões:
-
-  * Cadastrar Usuário
-  * Listar Usuários
-
-## 📝 Cadastro de Usuário
-
-* Formulário com nome e e-mail
-* Envio via HTTP POST
-* Feedback com SnackBar
-
-## 📋 Listagem de Usuários
-
-* Requisição HTTP GET
-* Exibição em lista dinâmica
-* Atualização ao recarregar a tela
-
----
-
-# 🔄 Fluxo de Funcionamento
-
-1. Usuário acessa o Flutter Web
-2. Realiza cadastro
-3. Dados são enviados para o backend
-4. Backend salva no PostgreSQL
-5. Listagem busca os dados atualizados
-
----
-
-# ⚠️ Tratamento de Erros
-
-* Exibe mensagem "Falha na conexão" caso o backend esteja offline
-* Validação básica de resposta HTTP
-
----
-
-# 🧪 Testes
-
-* Cadastro via formulário Flutter
-* Listagem atualizada
-* Testes via Swagger
-
----
-
-# 🎯 Objetivo da Atividade
-
-* Integração entre frontend e backend
-* Uso de API REST
-* Manipulação de dados com banco real
-* Navegação em Flutter Web
-* Tratamento de requisições HTTP
-
----
-
-# 👨‍💻 Autor
-
-Projeto desenvolvido para fins acadêmicos na disciplina de Desenvolvimento Mobile.
+* Utilizar `http://127.0.0.1:3000/usuarios` nas requisições do Flutter.
+* Backend e frontend devem estar rodando simultaneamente.

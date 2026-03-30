@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Usuários',
       home: HomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -21,15 +22,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(title: Text('Sistema de Usuários')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Sistema de Usuários',
-              style: TextStyle(fontSize: 24),
-            ),
-            SizedBox(height: 30),
 
             ElevatedButton(
               onPressed: () {
