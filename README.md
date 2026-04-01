@@ -11,6 +11,16 @@
 
 ## Execução
 
+### 0. Para acessar as pastas
+
+No terminal (São necessários 2 terminais para executar o front e o back)
+
+```bash
+cd backend
+cd front_usuarios
+```
+Lembrando que é recomendável abrir a pasta "Code" no VS Code
+
 ### 1. Banco de dados (Docker)
 
 Na pasta do docker-compose:
@@ -45,6 +55,8 @@ node index.js
 API disponível em:
 http://localhost:3000
 
+CTRL + C Para Desligar
+
 ---
 
 ### 3. Frontend (Flutter)
@@ -55,6 +67,16 @@ Na pasta do projeto Flutter:
 flutter pub get
 flutter run -d chrome
 ```
+
+Para reiniciar, é recomendado dar um clean no flutter:
+
+```bash
+flutter pub get
+flutter run -d chrome
+```
+
+CTRL + C Para abrir o terminal para finalizar o batch
+Apertar Y após isso.
 
 ---
 
