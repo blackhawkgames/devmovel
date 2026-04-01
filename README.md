@@ -32,6 +32,12 @@ docker compose up -d
 Acesse o pgAdmin em:
 http://localhost:5050
 
+Para verificar se subiu, execute:
+
+```bash
+docker ps
+```
+
 Crie a tabela:
 
 ```sql
@@ -45,6 +51,12 @@ CREATE TABLE usuarios (
 ---
 
 ### 2. Backend
+
+Para instalar o CORS (Caso necessário):
+
+```bash
+npm install cors
+```
 
 Na pasta do backend:
 
@@ -71,8 +83,7 @@ flutter run -d chrome
 Para reiniciar, é recomendado dar um clean no flutter:
 
 ```bash
-flutter pub get
-flutter run -d chrome
+flutter clean
 ```
 
 CTRL + C Para abrir o terminal para finalizar o batch
